@@ -22,13 +22,13 @@ const TodoTask = ({ task, completeTask, failTask }: Props) => {
       const currentSecond = currentTIme.getSeconds()
       const currentMinute = currentTIme.getMinutes()
       const currentHour = currentTIme.getHours()
-      console.log('checking current hours and minures',currentMinute, currentHour, currentSecond )
+      console.log('checking current hours and minutes',currentMinute, currentHour, currentSecond )
       
       const [hour1, minute1] = task.time.split(":")
       const seconds = 60
       const hour = parseInt(hour1)
       const minutes = parseInt(minute1) - 1
-      console.log('checking hours and minures',hour, minutes )
+      console.log('checking hours and minutes',hour, minutes )
 
       const diffHour = hour - currentHour
       let diffMinutes = minutes - currentMinute
@@ -64,6 +64,8 @@ const TodoTask = ({ task, completeTask, failTask }: Props) => {
       </button>
   
     </div>
+
+    
   );
 };
 
